@@ -35,6 +35,7 @@ a:hover {
   padding: 20px;
 }
 .nav-container {
+  width: 310px;
   position: fixed;
   left: 0;
   margin: 10px;
