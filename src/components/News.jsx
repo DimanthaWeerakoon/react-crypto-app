@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Select, Typography, Row, Col, Card } from "antd";
+import { Typography, Row, Col, Card } from "antd";
 import moment from "moment";
 
 import { useGetCryptoNewsQuery } from "../services/crptoNewsApi";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 const { Title, Text } = Typography;
-const { Option } = Select;
+// const { Option } = Select;
 
 const demoImage =
   "http://coinrevolous.com/wp-content/uploads/2020/06/cryptonews.jpg";
@@ -14,12 +14,12 @@ const demoImage =
 const News = ({ simplified }) => {
   const [newCategory, setNewCategory] = useState("Cyptocurrency");
   const count = simplified ? 12 : 24;
-
   const { data: cryptoNews, isFetching } = useGetCryptoNewsQuery({
     newCategory,
     count,
   });
   const { data } = useGetCryptosQuery(100);
+  console.log(data, setNewCategory);
 
   if (isFetching) return "Loading...";
 
