@@ -19,14 +19,9 @@ const Navbar = () => {
       setScreenSize(window.innerWidth);
 
       window.addEventListener("resize", handleResize);
-<<<<<<< HEAD
       return () => window.removeEventListener("resize", handleResize);
     };
-=======
-
-      return () => window.removeEventListener("resize", handleResize);
-    };
->>>>>>> a5f8c38cbadff49e2f3a52b65752a50b0448de72
+    console.log(handleResize);
   }, []);
 
   useEffect(() => {
@@ -59,12 +54,6 @@ const Navbar = () => {
           <Menu.Item icon={<FundOutlined />}>
             <Link to="/cryptocurrencies">Crypto Currencies</Link>
           </Menu.Item>
-<<<<<<< HEAD
-=======
-          <Menu.Item icon={<MoneyCollectOutlined />}>
-            <Link to="/exchanges">Exchanges</Link>
-          </Menu.Item>
->>>>>>> a5f8c38cbadff49e2f3a52b65752a50b0448de72
           <Menu.Item icon={<BulbOutlined />}>
             <Link to="/news">News</Link>
           </Menu.Item>
